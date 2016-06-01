@@ -1,7 +1,7 @@
 # Prácticas de R y RStudio
 - Ejercicio: **Data frame mtcars**
-- Autor....: **Juan Antonio García Cuevas**
-- Fecha....: 29/05/2016
+- Autor: **Juan Antonio García Cuevas**
+- Fecha: 29/05/2016
 
 ## Con el data frame mtcars (viene cargado en R).
 
