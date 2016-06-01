@@ -54,6 +54,7 @@
     head(mtcars)
 ```
 ```
+                       mpg cyl disp  hp drat    wt  qsec vs am gear carb
     Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
     Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
     Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
@@ -109,6 +110,7 @@
     mtcars_mpg_men15
 ```
 ```
+                         mpg cyl disp  hp drat    wt  qsec vs am gear carb
     Duster 360          14.3   8  360 245 3.21 3.570 15.84  0  0    3    4
     Cadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4
     Lincoln Continental 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4
@@ -140,6 +142,7 @@
     mtcars_mpg_men15[order_by_disp, ]
 ```
 ```
+                         mpg cyl disp  hp drat    wt  qsec vs am gear carb
     Camaro Z28          13.3   8  350 245 3.73 3.840 15.41  0  0    3    4
     Duster 360          14.3   8  360 245 3.21 3.570 15.84  0  0    3    4
     Chrysler Imperial   14.7   8  440 230 3.23 5.345 17.42  0  0    3    4
@@ -193,6 +196,7 @@ names(mtcars_mpg_men15) <- paste("var", 1:numero_columnas, sep = "")
     mtcars_mpg_men15
 ```
 ```
+                        var1 var2 var3 var4 var5  var6  var7 var8 var9 var10 var11
     Duster 360          14.3    8  360  245 3.21 3.570 15.84    0    0     3     4
     Cadillac Fleetwood  10.4    8  472  205 2.93 5.250 17.98    0    0     3     4
     Lincoln Continental 10.4    8  460  215 3.00 5.424 17.82    0    0     3     4
