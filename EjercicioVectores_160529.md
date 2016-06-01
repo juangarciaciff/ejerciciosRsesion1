@@ -174,7 +174,7 @@
     [239] 1016  523 1533 2600  402 1057 1108 1482 1026   23
 ```
 
-#### Crear el vector: ( cos(y1)/sin(x2), cos(y2)/sin(x3), ...,cos(yn-1)/sin(xn) )
+#### Crear el vector: ( cos(y1)/sin(x2), cos(y2)/sin(x3), ...,cos(yn-1)/sin(xn) ):
 ```
     > y1 <- y[1:(length(y)-1)]
     > y1
