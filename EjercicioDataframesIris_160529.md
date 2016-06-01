@@ -229,7 +229,7 @@
         5.843333     3.057333     3.758000     1.199333 
 ```
 
-# Muestra los rangos (min, max) de todas las columnas
+# Muestra los rangos (min, max) de todas las columnas:
 ```
     apply(iris[,1:5], 2, range)
 ```
@@ -430,7 +430,7 @@
     5           NA          NA
 ```
 
-#### Muestra todas las filas de las dos columnas solicitadas, después de ser modificadas
+#### Muestra todas las filas de las dos columnas solicitadas, después de ser modificadas:
 ```
     iris[, c("Sepal.Length", "Sepal.Width")]
 ```
@@ -593,14 +593,18 @@
 #### Las funciones mean y range dan un resultado NA, porque están teniendo en cuenta los valores NA:
 ```
     mean(iris[["Sepal.Length"]])
-    mean(iris[["Sepal.Width"]])
     range(iris[["Sepal.Length"]])
+```
+```
+    [1] NA
+    [1] NA NA
+```
+```
+    mean(iris[["Sepal.Width"]])
     range(iris[["Sepal.Width"]])
 ```
 ```
     [1] NA
-    [1] NA
-    [1] NA NA
     [1] NA NA
 ```
 
@@ -644,7 +648,7 @@
 
 ## 8. Visto lo anterior, ¿por qué es importante codificar los missing values como NA y no como 0, por ejemplo? 
 
-Porque si se codificaran con 0, se tendrían en cuanta para obtener la media, por lo que el valor de esta sería inferior al correcto.
+Porque si se codificaran con 0 se tendrían en cuenta en el cálculo de la media, por lo que el valor obtenido sería inferior al correcto.
 
 ## 9. Eliminar los valores NA usando na.omit(). 
 ```
@@ -813,8 +817,7 @@ Porque si se codificaran con 0, se tendrían en cuanta para obtener la media, po
     [127] 4.8 4.9 5.6 5.8 6.1 6.4 5.6 5.1 5.6 6.1 5.6 5.5 4.8 5.4 5.6 5.1 5.1 5.9 5.7 5.2 5.0 5.2 5.4 5.1
 ```
 
-#### vector de especie de cada uno de los valores:
-```
+#### Vector de especie de cada uno de los valores:
 ```
     Species <- iris[["Species"]]
     Species
