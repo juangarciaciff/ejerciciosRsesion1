@@ -6,7 +6,6 @@
 ## Con el data frame mtcars (viene cargado en R).
 
 #### Muestra el data frame mtcars:
-
 ```
     mtcars
 ```
