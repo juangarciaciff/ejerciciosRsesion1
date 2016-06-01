@@ -189,6 +189,10 @@
 #### Asignación de nuevos nombres de columnas:
 ```
     names(mtcars_mpg_men15) <- paste("var", 1:numero_columnas, sep = "")
+    names(mtcars_mpg_men15)
+```
+```
+    [1] "var1"  "var2"  "var3"  "var4"  "var5"  "var6"  "var7"  "var8"  "var9"  "var10" "var11"
 ```
 
 #### Muestra el data frame actualizado:
