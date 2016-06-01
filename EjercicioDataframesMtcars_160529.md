@@ -8,7 +8,7 @@
 
 ### Muestra el data frame mtcars:
 
-```R
+```
     mtcars
 ```
 ```
@@ -50,7 +50,7 @@
 ## 1. Previsualizar el contenido con la función head().
 
 ### Muestra las primeras filas del data frame:
-```R
+```
     head(mtcars)
 ```
 ```
@@ -65,7 +65,7 @@
 ## 2. Mirar el número de filas y columnas con nrow() y ncol().
 
 ### Obtiene y muestra el número de filas:
-```R
+```
     numero_filas <- nrow(mtcars)
     numero_filas
 ```
@@ -74,7 +74,7 @@
 ````
 
 ### Obtiene y muestra el número de columnas:
-```R
+```
     numero_columnas <- ncol(mtcars)
     numero_columnas
 ```
@@ -85,7 +85,7 @@
 ## 3. Crear un nuevo data frame con los modelos de coche que consumen menos de 15 millas/galón.
 
 ### Crea y muestra la lista completa de consumos:
-```R
+```
     mpg <- mtcars[, "mpg"]
     mpg
 ```
@@ -94,7 +94,7 @@
 ```
 
 ### Crea y muestra la lista de consumos menores a 15 millas/galón:
-```R
+```
     mpg_men15 <- mpg < 15
     mpg_men15
 ```
@@ -104,7 +104,7 @@
 ```
 
 ### Crea y muestra un data frame de coches que consumen menos de 15 millas/galón:
-```R
+```
     mtcars_mpg_men15 <- mtcars[mpg_men15, ]
     mtcars_mpg_men15
 ```
@@ -119,7 +119,7 @@
 ## 4. Ordenar el data frame anterior por disp.
 
 ### Muestra la lista de valores de la columna disp:
-```R
+```
     mtcars_mpg_men15[, "disp"]
 ```
 ```
@@ -127,7 +127,7 @@
 ```
 
 ### Obtiene y muestra la lista de posiciones de la columna disp según el orden de los valores de sus elementos:
-```R
+```
     order_by_disp <- order(mtcars_mpg_men15[, "disp"])
     order_by_disp
 ```
@@ -136,7 +136,7 @@
 ```
 
 ### Obtiene el data frame mtcars ordenado por la columna disp ordenada:
-```R
+```
     mtcars_mpg_men15[order_by_disp, ]
 ```
 ```
@@ -150,7 +150,7 @@
 ## 5. Calcular la media de las marchas (gear) de los modelos del data frame anterior.
 
 ### Muestra la lista de marchas:
-```R
+```
     mtcars_mpg_men15[, "gear"]
 ```
 ```
@@ -158,19 +158,17 @@
 ```
 
 ### Calcula el valor medio de las marchas:
-```R
+```
     mean(mtcars_mpg_men15[, "gear"])
 ```
 ```
     [1] 3
 ```
 
-## 6. Cambiar los nombres de las variables del data frame a var1, var2, ..., var11. Pista:
-## Mirar la documentación de la función paste y usarla para generar el vector (var1, var2, ..., varNâ)
-## donde N es el número de variables del data frame.
+## 6. Cambiar los nombres de las variables del data frame a var1, var2, ..., var11. Pista: Mirar la documentación de la función paste y usarla para generar el vector ("var1", "var2", ..., "varN") donde N es el número de variables del data frame.
 
 ### Muestra la lista de nombres actuales de las columnas:
-```R
+```
     names(mtcars_mpg_men15)
 ```
 ```
@@ -178,7 +176,7 @@
 ```
 
 ### Muestra la lista de los nuevos nombres que hay que asignar a las columnas:
-```R
+```
     paste("var", 1:numero_columnas, sep = "")
 ```
 ```
@@ -186,12 +184,12 @@
 ```
 
 ### Asignación de nuevos nombres de columnas:
-```R
+```
 names(mtcars_mpg_men15) <- paste("var", 1:numero_columnas, sep = "")
 ```
 
 ### Muestra el data frame actualizado:
-```R
+```
     mtcars_mpg_men15
 ```
 ```
