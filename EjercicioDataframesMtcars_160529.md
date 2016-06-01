@@ -6,7 +6,7 @@
 
 ## Con el data frame mtcars (viene cargado en R).
 
-### Muestra el data frame mtcars:
+#### Muestra el data frame mtcars:
 
 ```
     mtcars
@@ -49,7 +49,7 @@
 
 ## 1. Previsualizar el contenido con la función head().
 
-### Muestra las primeras filas del data frame:
+#### Muestra las primeras filas del data frame:
 ```
     head(mtcars)
 ```
@@ -64,7 +64,7 @@
 
 ## 2. Mirar el número de filas y columnas con nrow() y ncol().
 
-### Obtiene y muestra el número de filas:
+#### Obtiene y muestra el número de filas:
 ```
     numero_filas <- nrow(mtcars)
     numero_filas
@@ -73,7 +73,7 @@
     [1] 32
 ````
 
-### Obtiene y muestra el número de columnas:
+#### Obtiene y muestra el número de columnas:
 ```
     numero_columnas <- ncol(mtcars)
     numero_columnas
@@ -84,7 +84,7 @@
 
 ## 3. Crear un nuevo data frame con los modelos de coche que consumen menos de 15 millas/galón.
 
-### Crea y muestra la lista completa de consumos:
+#### Crea y muestra la lista completa de consumos:
 ```
     mpg <- mtcars[, "mpg"]
     mpg
@@ -93,7 +93,7 @@
     [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7 15.0 21.4
 ```
 
-### Crea y muestra la lista de consumos menores a 15 millas/galón:
+#### Crea y muestra la lista de consumos menores a 15 millas/galón:
 ```
     mpg_men15 <- mpg < 15
     mpg_men15
@@ -103,7 +103,7 @@
     [29] FALSE FALSE FALSE FALSE
 ```
 
-### Crea y muestra un data frame de coches que consumen menos de 15 millas/galón:
+#### Crea y muestra un data frame de coches que consumen menos de 15 millas/galón:
 ```
     mtcars_mpg_men15 <- mtcars[mpg_men15, ]
     mtcars_mpg_men15
@@ -118,7 +118,7 @@
 
 ## 4. Ordenar el data frame anterior por disp.
 
-### Muestra la lista de valores de la columna disp:
+#### Muestra la lista de valores de la columna disp:
 ```
     mtcars_mpg_men15[, "disp"]
 ```
@@ -126,7 +126,7 @@
     [1] 360 472 460 440 350
 ```
 
-### Obtiene y muestra la lista de posiciones de la columna disp según el orden de los valores de sus elementos:
+#### Obtiene y muestra la lista de posiciones de la columna disp según el orden de los valores de sus elementos:
 ```
     order_by_disp <- order(mtcars_mpg_men15[, "disp"])
     order_by_disp
@@ -135,7 +135,7 @@
     [1] 5 1 4 3 2
 ```
 
-### Obtiene el data frame mtcars ordenado por la columna disp ordenada:
+#### Obtiene el data frame mtcars ordenado por la columna disp ordenada:
 ```
     mtcars_mpg_men15[order_by_disp, ]
 ```
@@ -149,7 +149,7 @@
 
 ## 5. Calcular la media de las marchas (gear) de los modelos del data frame anterior.
 
-### Muestra la lista de marchas:
+#### Muestra la lista de marchas:
 ```
     mtcars_mpg_men15[, "gear"]
 ```
@@ -157,7 +157,7 @@
     [1] 3 3 3 3 3
 ```
 
-### Calcula el valor medio de las marchas:
+#### Calcula el valor medio de las marchas:
 ```
     mean(mtcars_mpg_men15[, "gear"])
 ```
@@ -167,7 +167,7 @@
 
 ## 6. Cambiar los nombres de las variables del data frame a var1, var2, ..., var11. Pista: Mirar la documentación de la función paste y usarla para generar el vector ("var1", "var2", ..., "varN") donde N es el número de variables del data frame.
 
-### Muestra la lista de nombres actuales de las columnas:
+#### Muestra la lista de nombres actuales de las columnas:
 ```
     names(mtcars_mpg_men15)
 ```
@@ -175,7 +175,7 @@
     [1] "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"   "am"   "gear" "carb"
 ```
 
-### Muestra la lista de los nuevos nombres que hay que asignar a las columnas:
+#### Muestra la lista de los nuevos nombres que hay que asignar a las columnas:
 ```
     paste("var", 1:numero_columnas, sep = "")
 ```
@@ -183,12 +183,12 @@
     [1] "var1"  "var2"  "var3"  "var4"  "var5"  "var6"  "var7"  "var8"  "var9"  "var10" "var11"
 ```
 
-### Asignación de nuevos nombres de columnas:
+#### Asignación de nuevos nombres de columnas:
 ```
 names(mtcars_mpg_men15) <- paste("var", 1:numero_columnas, sep = "")
 ```
 
-### Muestra el data frame actualizado:
+#### Muestra el data frame actualizado:
 ```
     mtcars_mpg_men15
 ```
