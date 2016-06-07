@@ -220,7 +220,7 @@
 
 ## 4. Comprobar con las funciones mean(), range(), que se obtienen los mismos valores. 
 
-#### Muestra la media de las columnas numéricas:
+#### Muestra la media de las columnas numéricas con mean():
 ```
     apply(iris[,1:4], 2, mean)
 ```
@@ -229,7 +229,7 @@
         5.843333     3.057333     3.758000     1.199333 
 ```
 
-# Muestra los rangos (min, max) de todas las columnas:
+#### Muestra los rangos (min, max) de todas las columnas con range():
 ```
     apply(iris[,1:5], 2, range)
 ```
@@ -589,6 +589,10 @@
 ```
 
 ## 6. ¿Qué pasa si usamos ahora las funciones mean(), range() con las variables Sepal.Length y Sepal.Width? ¿Tiene el mismo problema la función summary()?
+
+- Las funciones mean() y range() tienen en cuenta los valores NA, por lo que no se puede hacer el cálculo al no ser todos los datos numéricos.
+- La función sumary() no tiene en cuenta los valores NA, por lo que sí se puede hacer el cálculo al ser todos los datos numéricos.
+
 
 #### Las funciones mean y range dan un resultado NA, porque están teniendo en cuenta los valores NA:
 ```
